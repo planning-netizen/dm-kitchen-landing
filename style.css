@@ -708,14 +708,53 @@ button, input, select, textarea {
 }
 
 /* --------------------------------------------------------------------------
-   7. Why Refresh Section Grid
+   7. Why Refresh Section Grid & Feature Cards
    -------------------------------------------------------------------------- */
-.why-refresh-grid {
+.why-refresh-grid,
+.cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.75rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
+
+.feature-card {
+  background: var(--color-white);
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-border);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-card-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(220, 38, 38, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+}
+
+.feature-card-icon svg {
+  width: 26px !important;
+  height: 26px !important;
+  max-width: 26px !important;
+  max-height: 26px !important;
+  stroke: var(--color-red) !important;
+  color: var(--color-red) !important;
+  stroke-width: 2;
+  display: block;
+}
+
 
 /* --------------------------------------------------------------------------
    8. Callout Yellow Banner
