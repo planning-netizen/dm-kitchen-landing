@@ -200,9 +200,45 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('DM Home Improvement Kitchen Lead Submitted:', userAnswers);
       localStorage.setItem('dm_kitchen_quiz_submitted', 'true');
 
+      // Update name on success screen
+      const quizSuccessName = document.getElementById('quizSuccessName');
+      if (quizSuccessName) {
+        quizSuccessName.textContent = userAnswers.name;
+      }
+
+      // Build Google Calendar pre-filled URL with Questionnaire Answers
+      const calendarBaseUrl = 'https://calendar.app.google/YUK9WVCoRWskQeyL9';
+      const params = new URLSearchParams();
+      if (userAnswers.name) params.append('name', userAnswers.name);
+      if (userAnswers.email) params.append('email', userAnswers.email);
+      if (userAnswers.phone) params.append('phone', userAnswers.phone);
+
+      const notesText = `Kitchen Questionnaire Answers:\n` +
+        `• Budget: ${userAnswers.budget || 'Not specified'}\n` +
+        `• Timeline: ${userAnswers.timeline || 'Not specified'}\n` +
+        `• Project Scope: ${userAnswers.projectType || 'Not specified'}\n` +
+        `• Priorities: ${userAnswers.matters.length ? userAnswers.matters.join(', ') : 'Not specified'}\n` +
+        `• ZIP Code: ${userAnswers.zip || 'Not specified'}`;
+
+      params.append('notes', notesText);
+      params.append('description', notesText);
+
+      const fullBookingUrl = `${calendarBaseUrl}?${params.toString()}`;
+
+      // Update the button link on the success modal
+      const quizBookingBtn = document.getElementById('quizBookingBtn');
+      if (quizBookingBtn) {
+        quizBookingBtn.href = fullBookingUrl;
+      }
+
+      // Show success step
       updateQuizStep(6);
+
+      // Automatically open the Google Calendar booking in a new tab with prefilled answers
+      window.open(fullBookingUrl, '_blank');
     });
   }
+
 
   // --------------------------------------------------------------------------
   // 5. Lead Magnet Remodel Guide Form Submission

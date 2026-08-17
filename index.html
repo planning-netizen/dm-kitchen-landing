@@ -666,19 +666,23 @@
         </form>
       </div>
 
-      <!-- Success Screen with Direct PDF Download -->
-      <div id="quizStepSuccess" style="display: none; text-align: center; padding: 1.5rem 0;">
+      <!-- Success Screen with Direct PDF Download & Google Calendar Booking -->
+      <div id="quizStepSuccess" style="display: none; text-align: center; padding: 1.25rem 0;">
         <div class="success-icon" style="width: 56px; height: 56px; margin: 0 auto 1rem auto; background: rgba(46, 125, 50, 0.1); color: var(--color-acc-green); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
         </div>
-        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--color-royal-blue); margin-bottom: 0.5rem;">Appointment &amp; Questionnaire Received!</h3>
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--color-royal-blue); margin-bottom: 0.5rem;">Questionnaire Received!</h3>
         <p style="font-size: 0.95rem; color: var(--color-gray-dark); line-height: 1.5; margin-bottom: 1.5rem;">
-          Thank you! Your appointment consultation request is confirmed. As promised, your <strong>Free Kitchen Remodel Guide</strong> is unlocked below.
+          Thank you <strong id="quizSuccessName">Homeowner</strong>! Your project details have been saved. Click below to select your consultation date &amp; time on our calendar.
         </p>
 
-        <a href="assets/kitchen-guide-booklet.jpg" download="DM-Home-Improvement-Kitchen-Remodel-Guide.jpg" class="btn btn-gold btn-full" style="display: inline-block; padding: 1rem 1.5rem; font-weight: 800; font-size: 0.95rem; text-decoration: none;">
+        <a id="quizBookingBtn" href="https://calendar.app.google/YUK9WVCoRWskQeyL9" target="_blank" class="btn btn-red btn-full" style="display: block; padding: 1.1rem 1.25rem; font-weight: 800; font-size: 0.95rem; text-decoration: none; margin-bottom: 0.85rem; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.35);">
+          📅 CHOOSE YOUR CONSULTATION DATE &amp; TIME →
+        </a>
+
+        <a href="assets/kitchen-guide-booklet.jpg" download="DM-Home-Improvement-Kitchen-Remodel-Guide.jpg" class="btn btn-gold btn-full" style="display: block; padding: 0.9rem 1.25rem; font-weight: 800; font-size: 0.9rem; text-decoration: none;">
           📥 DOWNLOAD YOUR FREE GUIDE PDF →
         </a>
       </div>
