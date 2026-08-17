@@ -206,22 +206,48 @@ document.addEventListener('DOMContentLoaded', () => {
         quizSuccessName.textContent = userAnswers.name;
       }
 
-      // Build Google Calendar pre-filled URL with Questionnaire Answers
-      const calendarBaseUrl = 'https://calendar.app.google/YUK9WVCoRWskQeyL9';
-      const params = new URLSearchParams();
-      if (userAnswers.name) params.append('name', userAnswers.name);
-      if (userAnswers.email) params.append('email', userAnswers.email);
-      if (userAnswers.phone) params.append('phone', userAnswers.phone);
+      // Split full name into first and last name
+      const nameParts = (userAnswers.name || '').trim().split(/\s+/);
+      const firstName = nameParts[0] || '';
+      const lastName = nameParts.slice(1).join(' ') || '';
 
-      const notesText = `Kitchen Questionnaire Answers:\n` +
+      const notesText = `Kitchen Project Details:\n` +
         `• Budget: ${userAnswers.budget || 'Not specified'}\n` +
         `• Timeline: ${userAnswers.timeline || 'Not specified'}\n` +
         `• Project Scope: ${userAnswers.projectType || 'Not specified'}\n` +
         `• Priorities: ${userAnswers.matters.length ? userAnswers.matters.join(', ') : 'Not specified'}\n` +
         `• ZIP Code: ${userAnswers.zip || 'Not specified'}`;
 
+      // Build Google Calendar pre-filled URL with all parameter key variations
+      const calendarBaseUrl = 'https://calendar.app.google/YUK9WVCoRWskQeyL9';
+      const params = new URLSearchParams();
+
+      if (firstName) {
+        params.append('first_name', firstName);
+        params.append('firstName', firstName);
+      }
+      if (lastName) {
+        params.append('last_name', lastName);
+        params.append('lastName', lastName);
+      }
+      if (userAnswers.name) {
+        params.append('name', userAnswers.name);
+      }
+      if (userAnswers.email) {
+        params.append('email', userAnswers.email);
+      }
+      if (userAnswers.phone) {
+        params.append('phone', userAnswers.phone);
+        params.append('phoneNumber', userAnswers.phone);
+        params.append('phone_number', userAnswers.phone);
+      }
+
       params.append('notes', notesText);
       params.append('description', notesText);
+      params.append('details', notesText);
+      params.append('q', notesText);
+      params.append('q1', notesText);
+      params.append('q_0', notesText);
 
       const fullBookingUrl = `${calendarBaseUrl}?${params.toString()}`;
 
@@ -231,6 +257,22 @@ document.addEventListener('DOMContentLoaded', () => {
         quizBookingBtn.href = fullBookingUrl;
       }
 
+      // Bind clipboard copy button
+      const btnCopySummary = document.getElementById('btnCopySummary');
+      if (btnCopySummary) {
+        btnCopySummary.onclick = () => {
+          const fullCopyText = `Name: ${userAnswers.name}\nPhone: ${userAnswers.phone}\nEmail: ${userAnswers.email}\n${notesText}`;
+          navigator.clipboard.writeText(fullCopyText).then(() => {
+            btnCopySummary.textContent = '✓ Summary Copied!';
+            setTimeout(() => {
+              btnCopySummary.textContent = '📋 Copy My Project Summary to Clipboard';
+            }, 3000);
+          }).catch(() => {
+            alert(fullCopyText);
+          });
+        };
+      }
+
       // Show success step
       updateQuizStep(6);
 
@@ -238,6 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.open(fullBookingUrl, '_blank');
     });
   }
+
 
 
   // --------------------------------------------------------------------------
