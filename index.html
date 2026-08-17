@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=6060606">
+  <link rel="stylesheet" href="style.css?v=7070707">
 </head>
 <body>
 
@@ -139,7 +139,7 @@
     </section>
 
     <!-- ==========================================
-         4. LEAD MAGNET DOWNLOAD SECTION (KITCHEN REMODEL GUIDE)
+         4. LEAD MAGNET SECTION (MUST BOOK APPOINTMENT TO DOWNLOAD GUIDE)
          ========================================== -->
     <section class="section-padding guide-section" id="guide">
       <div class="container guide-grid">
@@ -154,10 +154,10 @@
 
         <!-- Center: Text & Takeaways Bullet List -->
         <div class="guide-content">
-          <span class="guide-eyebrow">FREE PLANNING RESOURCE</span>
-          <h2 class="guide-title">Download Our Free <span>Kitchen Remodel Guide</span></h2>
+          <span class="guide-eyebrow">EXCLUSIVE HOMEOWNER RESOURCE</span>
+          <h2 class="guide-title">Get Our Free <span>Kitchen Remodel Guide</span></h2>
           <p style="font-size: 0.95rem; color: var(--color-gray-dark); margin-bottom: 1.25rem;">
-            Planning a kitchen update? Avoid costly contractor mistakes and discover expert secret tips with our comprehensive handbook.
+            Planning a kitchen update? Avoid costly contractor mistakes and discover expert secret tips with our comprehensive handbook. <strong>Book your free consultation below to unlock instant guide download access.</strong>
           </p>
 
           <ul class="guide-items">
@@ -196,36 +196,22 @@
           </ul>
         </div>
 
-        <!-- Right: Lead Capture Form Card -->
-        <div class="form-card-light">
-          <div id="guideFormContainer">
-            <h3 class="form-header-title">Get The Free Guide</h3>
-            <p class="form-header-subtitle">Enter your email to get instant access to the PDF.</p>
-
-            <form class="lead-form" id="guideLeadForm">
-              <input type="text" class="form-input" placeholder="Full Name" required>
-              <input type="email" class="form-input" placeholder="Email Address" required>
-              <input type="text" class="form-input" placeholder="ZIP Code" required>
-
-              <button type="submit" class="btn btn-gold btn-full" style="margin-top: 0.25rem;">
-                GET YOUR FREE GUIDE
-              </button>
-
-              <div class="privacy-notice" style="margin-top: 0.75rem; text-align: center; font-size: 0.75rem; color: var(--color-gray-muted);">
-                <span>🔒 100% Free &amp; Secure. No spam, ever.</span>
-              </div>
-            </form>
+        <!-- Right: Book Consultation to Unlock Guide Card -->
+        <div class="form-card-light text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2.5rem 1.75rem;">
+          <div style="width: 56px; height: 56px; background: rgba(201, 162, 39, 0.15); color: var(--color-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 1.5rem;">
+            📘
           </div>
+          <h3 class="form-header-title" style="margin-bottom: 0.5rem;">Book To Get The Free Guide</h3>
+          <p class="form-header-subtitle" style="margin-bottom: 1.75rem; line-height: 1.5;">
+            Schedule your consultation appointment to claim your free 3D kitchen design render and unlock your instant Guide download.
+          </p>
 
-          <!-- Form Success Confirmation -->
-          <div class="form-success-message" id="guideSuccessMessage" style="display: none;">
-            <div class="success-icon" style="width: 48px; height: 48px; margin: 0 auto 0.75rem auto; background: rgba(46, 125, 50, 0.1); color: var(--color-acc-green); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </div>
-            <h4 style="font-size: 1.3rem; font-weight: 800; color: var(--color-royal-blue); margin-bottom: 0.5rem; text-align: center;">Guide Sent!</h4>
-            <p style="font-size: 0.9rem; color: var(--color-gray-dark); text-align: center;">Thank you! We've sent the Luxury Kitchen Remodeling Guide straight to your inbox.</p>
+          <button type="button" class="btn btn-gold btn-full js-open-consultation" style="font-size: 0.92rem; padding: 1.1rem 1.5rem; text-transform: uppercase; font-weight: 800; letter-spacing: 0.05em;">
+            BOOK NOW TO GET YOUR FREE GUIDE →
+          </button>
+
+          <div class="privacy-notice" style="margin-top: 1rem; text-align: center; font-size: 0.78rem; color: var(--color-gray-muted);">
+            <span>🔒 100% Confidential &amp; Free. No spam guarantee.</span>
           </div>
         </div>
       </div>
@@ -393,52 +379,7 @@
     </section>
 
     <!-- ==========================================
-         9. VIDEO SHOWCASE ADVERTISEMENTS
-         ========================================== -->
-    <section class="section-padding bg-warm">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-eyebrow">SEE OUR CRAFTSMANSHIP IN ACTION</span>
-          <h2 class="section-title">Featured Video Showcases</h2>
-          <p class="section-subtitle">Watch our latest kitchen transformation projects across Charlotte &amp; NC.</p>
-        </div>
-
-        <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-          <div class="gallery-item">
-            <video controls preload="metadata" style="width: 100%; border-radius: var(--radius-md) var(--radius-md) 0 0;">
-              <source src="Ad1-Voiceover Version.mp4" type="video/mp4">
-            </video>
-            <div class="gallery-card-body">
-              <h3 class="gallery-title">Kitchen Remodel Overview</h3>
-              <p class="gallery-desc">Full voiceover walkthrough of a custom kitchen makeover.</p>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <video controls preload="metadata" style="width: 100%; border-radius: var(--radius-md) var(--radius-md) 0 0;">
-              <source src="Ad2-v2.mp4" type="video/mp4">
-            </video>
-            <div class="gallery-card-body">
-              <h3 class="gallery-title">Cabinet &amp; Countertop Upgrade</h3>
-              <p class="gallery-desc">High-definition spotlight on custom cabinetry finishes.</p>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <video controls preload="metadata" style="width: 100%; border-radius: var(--radius-md) var(--radius-md) 0 0;">
-              <source src="Ad5-v2.mp4" type="video/mp4">
-            </video>
-            <div class="gallery-card-body">
-              <h3 class="gallery-title">Quartz Worktops &amp; Backsplash</h3>
-              <p class="gallery-desc">Precision installation of durable, stain-resistant quartz.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================
-         10. REVIEWS & TESTIMONIALS
+         9. REVIEWS & TESTIMONIALS
          ========================================== -->
     <section class="section-padding bg-white" id="reviews">
       <div class="container">
@@ -477,7 +418,7 @@
     </section>
 
     <!-- ==========================================
-         11. FINAL CTA BANNER
+         10. FINAL CTA BANNER
          ========================================== -->
     <section class="section-padding bg-dark text-center" style="background: linear-gradient(135deg, #0b192c 0%, #152844 100%); color: white;">
       <div class="container">
@@ -493,7 +434,7 @@
   </main>
 
   <!-- ==========================================
-       12. FOOTER
+       11. FOOTER
        ========================================== -->
   <footer class="footer">
     <div class="container">
@@ -545,7 +486,7 @@
   </footer>
 
   <!-- ==========================================
-       13. KITCHEN PROJECT QUESTIONNAIRE POPUP MODAL
+       12. KITCHEN PROJECT QUESTIONNAIRE POPUP MODAL
        ========================================== -->
   <div class="modal-overlay" id="quizModal" role="dialog" aria-modal="true">
     <div class="quiz-modal-card">
@@ -721,7 +662,7 @@
       <!-- STEP 5: Final Contact Info Form -->
       <div id="quizStep5" style="display: none;">
         <h3 class="quiz-question-title">Where should we send your custom 3D kitchen render &amp; quote?</h3>
-        <p class="quiz-question-subtitle">Enter your details to claim your free design consultation.</p>
+        <p class="quiz-question-subtitle">Enter your details to claim your free design consultation &amp; download your Kitchen Remodel Guide.</p>
 
         <form class="lead-form" id="quizFinalForm">
           <input type="text" class="form-input" id="quizName" placeholder="Full Name *" required>
@@ -730,20 +671,26 @@
           <input type="text" class="form-input" id="quizZip" placeholder="ZIP Code *" required>
 
           <button type="submit" class="btn btn-red btn-full" style="margin-top: 0.5rem; font-size: 0.95rem; padding: 1rem;">
-            CLAIM MY FREE DESIGN CONSULTATION →
+            CLAIM MY FREE DESIGN CONSULTATION &amp; GUIDE →
           </button>
         </form>
       </div>
 
-      <!-- Success Screen -->
+      <!-- Success Screen with Direct PDF Download -->
       <div id="quizStepSuccess" style="display: none; text-align: center; padding: 1.5rem 0;">
         <div class="success-icon" style="width: 56px; height: 56px; margin: 0 auto 1rem auto; background: rgba(46, 125, 50, 0.1); color: var(--color-acc-green); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
         </div>
-        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--color-royal-blue); margin-bottom: 0.5rem;">Questionnaire Received!</h3>
-        <p style="font-size: 0.95rem; color: var(--color-gray-dark); line-height: 1.5;">Thank you! Our lead kitchen design specialist will review your questionnaire and contact you to get started.</p>
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--color-royal-blue); margin-bottom: 0.5rem;">Appointment &amp; Questionnaire Received!</h3>
+        <p style="font-size: 0.95rem; color: var(--color-gray-dark); line-height: 1.5; margin-bottom: 1.5rem;">
+          Thank you! Your appointment consultation request is confirmed. As promised, your <strong>Free Kitchen Remodel Guide</strong> is unlocked below.
+        </p>
+
+        <a href="assets/kitchen-guide-booklet.jpg" download="DM-Home-Improvement-Kitchen-Remodel-Guide.jpg" class="btn btn-gold btn-full" style="display: inline-block; padding: 1rem 1.5rem; font-weight: 800; font-size: 0.95rem; text-decoration: none;">
+          📥 DOWNLOAD YOUR FREE GUIDE PDF →
+        </a>
       </div>
     </div>
   </div>
@@ -766,6 +713,6 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="script.js?v=6060606"></script>
+  <script src="script.js?v=7070707"></script>
 </body>
 </html>
