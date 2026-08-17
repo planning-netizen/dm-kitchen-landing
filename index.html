@@ -666,26 +666,38 @@
         </form>
       </div>
 
-      <!-- Success Screen for Direct 1-Click Lead Submission -->
-      <div id="quizStepSuccess" style="display: none; text-align: center; padding: 1.5rem 0;">
-        <div class="success-icon" style="width: 60px; height: 60px; margin: 0 auto 1rem auto; background: rgba(46, 125, 50, 0.12); color: var(--color-acc-green); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Success Screen with Post-Submission Customer Takeaway -->
+      <div id="quizStepSuccess" style="display: none; text-align: center; padding: 1.25rem 0;">
+        <div class="success-icon" style="width: 56px; height: 56px; margin: 0 auto 0.75rem auto; background: rgba(46, 125, 50, 0.12); color: var(--color-acc-green); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
         </div>
-        <h3 style="font-family: var(--font-heading); font-size: 1.55rem; font-weight: 800; color: var(--color-royal-blue); margin-bottom: 0.5rem;">Consultation Request Received!</h3>
-        <p style="font-size: 0.95rem; color: var(--color-gray-dark); line-height: 1.6; margin-bottom: 1.5rem;">
-          Thank you <strong id="quizSuccessName">Homeowner</strong>! Your kitchen project details have been received. Our master design team will contact you shortly to confirm your consultation.
+        
+        <h3 style="font-family: var(--font-heading); font-size: 1.45rem; font-weight: 800; color: var(--color-royal-blue); margin-bottom: 0.35rem;">
+          You're One Step Closer to Your New Space
+        </h3>
+        
+        <p style="font-size: 0.92rem; color: var(--color-gray-dark); line-height: 1.55; margin-bottom: 1.25rem; text-align: left;">
+          Thank you for sharing a little about your project, <strong id="quizSuccessName">Homeowner</strong>! A member of the <strong>DM Home Improvement</strong> team will review your information and reach out to discuss your goals, answer initial questions, and determine the best next step for your project.
         </p>
 
-        <a href="assets/kitchen-guide-booklet.jpg" download="DM-Home-Improvement-Kitchen-Remodel-Guide.jpg" class="btn btn-gold btn-full" style="display: block; padding: 1.1rem 1.25rem; font-weight: 800; font-size: 0.95rem; text-decoration: none; margin-bottom: 1rem; box-shadow: 0 4px 15px rgba(201, 162, 39, 0.35);">
-          📥 DOWNLOAD YOUR FREE GUIDE PDF →
+        <!-- Post-Submission Takeaway Box -->
+        <div style="background: #f7f5ef; border-left: 4px solid var(--color-gold); border-radius: 8px; padding: 1.1rem; text-align: left; margin-bottom: 1.25rem;">
+          <h4 style="font-family: var(--font-heading); font-size: 0.92rem; font-weight: 800; color: var(--color-charcoal); margin-bottom: 0.4rem;">
+            📌 What to have ready:
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--color-gray-dark); line-height: 1.5; margin: 0;">
+            If you have inspiration photos, Pinterest ideas, measurements, or pictures of your current space, keep them handy. Don't worry if you don't — we'll help guide you through the process.
+          </p>
+        </div>
+
+        <a href="assets/kitchen-guide-booklet.jpg" download="DM-Home-Improvement-Kitchen-Remodel-Guide.jpg" class="btn btn-gold btn-full" style="display: block; padding: 1rem 1.25rem; font-weight: 800; font-size: 0.92rem; text-decoration: none; margin-bottom: 0.85rem; box-shadow: 0 4px 15px rgba(201, 162, 39, 0.35);">
+          📥 DOWNLOAD YOUR FREE KITCHEN GUIDE PDF →
         </a>
 
-        <div style="background: var(--color-soft-beige); border-radius: 8px; padding: 1rem; margin-top: 1rem;">
-          <p style="font-size: 0.85rem; color: var(--color-charcoal); margin: 0;">
-            Need immediate assistance? Call us directly: <a href="tel:9105570915" style="color: var(--color-red); font-weight: 800; text-decoration: underline;">(910) 557-0915</a>
-          </p>
+        <div style="text-align: center; font-size: 0.82rem; color: var(--color-gray-muted);">
+          <span>Need immediate assistance? Call us directly: <a href="tel:9105570915" style="color: var(--color-red); font-weight: 800; text-decoration: underline;">(910) 557-0915</a></span>
         </div>
       </div>
     </div>
