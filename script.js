@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Step 5 Final Form Submission
+  // Step 5 Final Form Submission (Direct 1-Click Submission)
   const quizFinalForm = document.getElementById('quizFinalForm');
   if (quizFinalForm) {
     quizFinalForm.addEventListener('submit', (e) => {
@@ -206,80 +206,11 @@ document.addEventListener('DOMContentLoaded', () => {
         quizSuccessName.textContent = userAnswers.name;
       }
 
-      // Split full name into first and last name
-      const nameParts = (userAnswers.name || '').trim().split(/\s+/);
-      const firstName = nameParts[0] || '';
-      const lastName = nameParts.slice(1).join(' ') || '';
-
-      const notesText = `Kitchen Project Details:\n` +
-        `• Budget: ${userAnswers.budget || 'Not specified'}\n` +
-        `• Timeline: ${userAnswers.timeline || 'Not specified'}\n` +
-        `• Project Scope: ${userAnswers.projectType || 'Not specified'}\n` +
-        `• Priorities: ${userAnswers.matters.length ? userAnswers.matters.join(', ') : 'Not specified'}\n` +
-        `• ZIP Code: ${userAnswers.zip || 'Not specified'}`;
-
-      // Build Google Calendar pre-filled URL with all parameter key variations
-      const calendarBaseUrl = 'https://calendar.app.google/YUK9WVCoRWskQeyL9';
-      const params = new URLSearchParams();
-
-      if (firstName) {
-        params.append('first_name', firstName);
-        params.append('firstName', firstName);
-      }
-      if (lastName) {
-        params.append('last_name', lastName);
-        params.append('lastName', lastName);
-      }
-      if (userAnswers.name) {
-        params.append('name', userAnswers.name);
-      }
-      if (userAnswers.email) {
-        params.append('email', userAnswers.email);
-      }
-      if (userAnswers.phone) {
-        params.append('phone', userAnswers.phone);
-        params.append('phoneNumber', userAnswers.phone);
-        params.append('phone_number', userAnswers.phone);
-      }
-
-      params.append('notes', notesText);
-      params.append('description', notesText);
-      params.append('details', notesText);
-      params.append('q', notesText);
-      params.append('q1', notesText);
-      params.append('q_0', notesText);
-
-      const fullBookingUrl = `${calendarBaseUrl}?${params.toString()}`;
-
-      // Update the button link on the success modal
-      const quizBookingBtn = document.getElementById('quizBookingBtn');
-      if (quizBookingBtn) {
-        quizBookingBtn.href = fullBookingUrl;
-      }
-
-      // Bind clipboard copy button
-      const btnCopySummary = document.getElementById('btnCopySummary');
-      if (btnCopySummary) {
-        btnCopySummary.onclick = () => {
-          const fullCopyText = `Name: ${userAnswers.name}\nPhone: ${userAnswers.phone}\nEmail: ${userAnswers.email}\n${notesText}`;
-          navigator.clipboard.writeText(fullCopyText).then(() => {
-            btnCopySummary.textContent = '✓ Summary Copied!';
-            setTimeout(() => {
-              btnCopySummary.textContent = '📋 Copy My Project Summary to Clipboard';
-            }, 3000);
-          }).catch(() => {
-            alert(fullCopyText);
-          });
-        };
-      }
-
-      // Show success step
+      // Show success screen instantly in 1 click with zero extra steps or external redirects
       updateQuizStep(6);
-
-      // Automatically open the Google Calendar booking in a new tab with prefilled answers
-      window.open(fullBookingUrl, '_blank');
     });
   }
+
 
 
 
