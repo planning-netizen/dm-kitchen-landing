@@ -1498,3 +1498,33 @@ button, input, select, textarea {
   color: var(--color-charcoal);
 }
 
+/* --------------------------------------------------------------------------
+   Text Alignment & Final CTA Alignment Utilities
+   -------------------------------------------------------------------------- */
+.text-center {
+  text-align: center !important;
+}
+
+.final-cta-section {
+  text-align: center !important;
+}
+
+.final-cta-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+.final-cta-container h2,
+.final-cta-container p,
+.final-cta-container button,
+.final-cta-container a {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
