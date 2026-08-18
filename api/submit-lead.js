@@ -35,6 +35,18 @@ module.exports = async function handler(req, res) {
 
     const prioritiesText = Array.isArray(matters) ? matters.join(', ') : (matters || 'None selected');
 
+    // Plain text alternative for anti-spam scoring
+    const plainTextContent = `NEW ${siteType.toUpperCase()} PROJECT LEAD\n\n` +
+      `Full Name: ${name}\n` +
+      `Phone Number: ${phone || 'N/A'}\n` +
+      `Email Address: ${email}\n` +
+      `ZIP Code: ${zip || 'N/A'}\n` +
+      `Investment Range: ${budget || 'N/A'}\n` +
+      `Timeline: ${timeline || 'N/A'}\n` +
+      `Project Scope: ${projectType || 'N/A'}\n` +
+      `What Matters Most: ${prioritiesText}\n\n` +
+      `Submitted via DM Home Improvement ${siteType} Landing Page`;
+
     const htmlContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
         <div style="background: #152844; padding: 20px; text-align: center; color: #ffffff;">
@@ -83,18 +95,25 @@ module.exports = async function handler(req, res) {
       </div>
     `;
 
+    // Use domain-authenticated sender if configured, or onboarding default
+    const senderEmail = process.env.SENDER_EMAIL || 'DM Leads <onboarding@resend.dev>';
+
+    const resendPayload = {
+      from: senderEmail,
+      to: [recipientEmail],
+      reply_to: email,
+      subject: `🚨 New ${siteType} Lead: ${name} (${budget || 'Quote Request'})`,
+      html: htmlContent,
+      text: plainTextContent
+    };
+
     const resendResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${resendApiKey}`
       },
-      body: JSON.stringify({
-        from: 'DM Leads <onboarding@resend.dev>',
-        to: recipientEmail,
-        subject: `🚨 New ${siteType} Lead: ${name} (${budget || 'Quote Request'})`,
-        html: htmlContent
-      })
+      body: JSON.stringify(resendPayload)
     });
 
     const resendData = await resendResponse.json();
