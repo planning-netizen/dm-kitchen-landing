@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Step 5 Final Form Submission (Direct 1-Click Submission)
+  // Step 5 Final Form Submission (Direct 1-Click Submission with Email Notification)
   const quizFinalForm = document.getElementById('quizFinalForm');
   if (quizFinalForm) {
     quizFinalForm.addEventListener('submit', (e) => {
@@ -200,13 +200,25 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('DM Home Improvement Kitchen Lead Submitted:', userAnswers);
       localStorage.setItem('dm_kitchen_quiz_submitted', 'true');
 
+      // Trigger instant email notification to planning@dmhomeimprovementllc.com via Resend API
+      fetch('/api/submit-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...userAnswers,
+          pageType: 'Kitchen'
+        })
+      }).then(res => res.json())
+        .then(data => console.log('Lead notification sent:', data))
+        .catch(err => console.error('Error sending lead email:', err));
+
       // Update name on success screen
       const quizSuccessName = document.getElementById('quizSuccessName');
       if (quizSuccessName) {
         quizSuccessName.textContent = userAnswers.name;
       }
 
-      // Show success screen instantly in 1 click with zero extra steps or external redirects
+      // Show success screen instantly in 1 click
       updateQuizStep(6);
     });
   }
