@@ -1,0 +1,3 @@
+# Ignore raw video assets in root directory
+*.mp4
+!assets/*.mp4
