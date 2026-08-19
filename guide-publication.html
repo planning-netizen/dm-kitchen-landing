@@ -33,7 +33,7 @@
       page-break-inside: avoid;
       overflow: hidden;
       background-color: #050608;
-      padding: 0.6in 0.7in;
+      padding: 0.5in 0.6in;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -49,9 +49,8 @@
       font-family: 'Alex Brush', cursive;
     }
 
-    .gold-text {
-      color: #D8B45A;
-    }
+    .gold-text { color: #D8B45A; }
+    .blue-text { color: #60A5FA; }
 
     .gold-bg {
       background: linear-gradient(135deg, #F5DC96 0%, #D8B45A 50%, #B89235 100%);
@@ -59,30 +58,49 @@
     }
 
     .card {
-      background: rgba(7, 26, 74, 0.35);
+      background: rgba(7, 26, 74, 0.4);
       border: 1px solid rgba(216, 180, 90, 0.3);
-      border-radius: 12px;
-      padding: 16px;
+      border-radius: 10px;
+      padding: 12px;
     }
 
     .card-dark {
       background: rgba(10, 14, 23, 0.85);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 14px;
+      border-radius: 10px;
+      padding: 10px;
     }
 
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
-    .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+    .photo-box {
+      width: 100%;
+      height: 110px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid rgba(216, 180, 90, 0.4);
+      margin-bottom: 8px;
+    }
+
+    .photo-box-lg {
+      width: 100%;
+      height: 140px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid rgba(216, 180, 90, 0.4);
+      margin-bottom: 8px;
+    }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+    .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 8px; }
+    .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
 
     .header-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid rgba(216, 180, 90, 0.3);
-      padding-bottom: 10px;
-      margin-bottom: 15px;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .header-title {
@@ -101,7 +119,7 @@
 
     .footer-bar {
       border-top: 1px solid rgba(255, 255, 255, 0.15);
-      padding-top: 10px;
+      padding-top: 8px;
       display: flex;
       justify-content: space-between;
       font-size: 9px;
@@ -119,22 +137,30 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 800;
       text-transform: uppercase;
-      font-size: 14px;
-      margin-bottom: 6px;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 11px;
+      margin-bottom: 4px;
     }
 
     p {
-      font-size: 11px;
-      line-height: 1.5;
+      font-size: 10px;
+      line-height: 1.45;
       color: #E7E7E7;
     }
 
     .callout {
       background: rgba(216, 180, 90, 0.15);
       border-left: 4px solid #D8B45A;
-      padding: 10px 14px;
+      padding: 8px 12px;
       border-radius: 6px;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       color: #FFFFFF;
       text-transform: uppercase;
@@ -143,9 +169,9 @@
     .callout-red {
       background: rgba(229, 57, 53, 0.15);
       border-left: 4px solid #E53935;
-      padding: 10px 14px;
+      padding: 8px 12px;
       border-radius: 6px;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       color: #FFFFFF;
       text-transform: uppercase;
@@ -154,11 +180,11 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 10px;
+      font-size: 9.5px;
     }
 
     th, td {
-      padding: 8px 10px;
+      padding: 6px 8px;
       border: 1px solid rgba(255, 255, 255, 0.1);
       text-align: left;
     }
@@ -172,9 +198,9 @@
 
     .badge {
       display: inline-block;
-      padding: 2px 8px;
+      padding: 2px 6px;
       border-radius: 4px;
-      font-size: 9px;
+      font-size: 8.5px;
       font-weight: 700;
       text-transform: uppercase;
     }
@@ -187,7 +213,7 @@
 <body>
 
   <!-- PAGE 1: COVER -->
-  <div class="page" style="background: linear-gradient(to bottom, rgba(5,6,8,0.7), rgba(5,6,8,0.95)), url('C:/DM Kitchen Landing/assets/generative/1.jpg') center/cover;">
+  <div class="page" style="background: linear-gradient(to bottom, rgba(5,6,8,0.65), rgba(5,6,8,0.95)), url('C:/DM Kitchen Landing/assets/generative/1.jpg') center/cover;">
     <div class="header-bar">
       <span class="header-title">LUXURY EDITORIAL EDITION</span>
       <span class="page-num">OFFICIAL HOMEOWNER GUIDE</span>
@@ -197,8 +223,8 @@
       <h1 style="font-size: 42px; color: #FFFFFF; letter-spacing: 0.02em;">KITCHEN <br/><span class="gold-text">REMODELING GUIDE</span></h1>
       <p class="font-script" style="font-size: 36px; color: #D8B45A; margin: 18px 0;">Plan beautifully. Remodel confidently.</p>
       <div style="width: 140px; height: 1px; background: #D8B45A; margin: 20px auto;"></div>
-      <p style="font-size: 11px; font-weight: 700; letter-spacing: 0.15em; uppercase; color: #FFFFFF; background: rgba(7, 26, 74, 0.8); padding: 10px 20px; border-radius: 30px; display: inline-block; border: 1px solid #D8B45A;">
-        5 COSTLY MISTAKES • MATERIAL SELECTION • STORAGE SECRETS • BUDGET PLANNING • PROJECT TIMELINE
+      <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.15em; uppercase; color: #FFFFFF; background: rgba(7, 26, 74, 0.85); padding: 10px 20px; border-radius: 30px; display: inline-block; border: 1px solid #D8B45A;">
+        5 COSTLY MISTAKES • MATERIAL SPECS • STORAGE SECRETS • BUDGET PLANNING • PROJECT TIMELINE
       </p>
     </div>
     <div class="footer-bar">
@@ -207,28 +233,35 @@
     </div>
   </div>
 
-  <!-- PAGE 2: INTRODUCTION -->
+  <!-- PAGE 2: INTRODUCTION & ROADMAP -->
   <div class="page">
     <div class="header-bar">
       <span class="header-title">FOUNDATION & OVERVIEW</span>
       <span class="page-num">PAGE 02 / 14</span>
     </div>
     <div>
-      <p class="font-script gold-text" style="font-size: 24px; margin-bottom: 4px;">Before you begin...</p>
-      <h2 style="font-size: 28px; color: #FFFFFF; margin-bottom: 14px;">BEFORE YOU REMODEL, <span style="color: #E53935;">READ THIS.</span></h2>
-      <div class="card" style="margin-bottom: 20px; line-height: 1.6;">
-        <p style="margin-bottom: 10px;">A successful kitchen remodel isn't simply about choosing beautiful cabinets, countertops and appliances.</p>
-        <p style="margin-bottom: 10px;">The decisions made before construction begins can have a major impact on how the finished kitchen looks, functions and fits within your expectations.</p>
-        <p class="gold-text" style="font-weight: 600;">This guide will walk you through the most important areas to think about before remodeling your kitchen—from layout and storage to materials, budgeting and project planning.</p>
+      <p class="font-script gold-text" style="font-size: 22px; margin-bottom: 2px;">Before you begin...</p>
+      <h2 style="font-size: 26px; color: #FFFFFF; margin-bottom: 10px;">BEFORE YOU REMODEL, <span style="color: #E53935;">READ THIS.</span></h2>
+      
+      <div class="grid-2" style="margin-bottom: 12px;">
+        <div class="card" style="line-height: 1.5;">
+          <p style="margin-bottom: 8px;">A successful kitchen remodel isn't simply about choosing beautiful cabinets, countertops and appliances.</p>
+          <p style="margin-bottom: 8px;">The decisions made before construction begins can have a major impact on how the finished kitchen looks, functions and fits within your expectations.</p>
+          <p class="gold-text" style="font-weight: 600;">This guide will walk you through layout, storage, materials, budgeting and project planning.</p>
+        </div>
+        <div>
+          <img src="C:/DM Kitchen Landing/assets/kitchen-classic.jpg" alt="Luxury Kitchen Design" class="photo-box-lg" style="margin-bottom:0;" />
+        </div>
       </div>
+
       <h3>YOUR REMODELING ROADMAP</h3>
-      <div class="grid-3" style="margin-top: 12px;">
-        <div class="card-dark"><span class="gold-text" style="font-size: 18px; font-weight: 900;">01</span><h4>Define Goals</h4><p>Clarify lifestyle needs and daily pain points.</p></div>
-        <div class="card-dark"><span class="gold-text" style="font-size: 18px; font-weight: 900;">02</span><h4>Plan Layout</h4><p>Zone primary activity work triangles.</p></div>
-        <div class="card-dark"><span class="gold-text" style="font-size: 18px; font-weight: 900;">03</span><h4>Choose Materials</h4><p>Evaluate stone porosity and cabinet millwork.</p></div>
-        <div class="card-dark"><span class="gold-text" style="font-size: 18px; font-weight: 900;">04</span><h4>Build Budget</h4><p>Allocate line items & reserve contingency buffer.</p></div>
-        <div class="card-dark"><span class="gold-text" style="font-size: 18px; font-weight: 900;">05</span><h4>Plan Timeline</h4><p>Understand lead times for custom fabrication.</p></div>
-        <div class="card-dark"><span class="gold-text" style="font-size: 18px; font-weight: 900;">06</span><h4>Choose Partner</h4><p>Ask critical questions to vet contractors.</p></div>
+      <div class="grid-3" style="margin-top: 8px;">
+        <div class="card-dark"><span class="gold-text" style="font-size: 16px; font-weight: 900;">01</span><h4>Define Goals</h4><p>Clarify lifestyle needs and daily pain points.</p></div>
+        <div class="card-dark"><span class="gold-text" style="font-size: 16px; font-weight: 900;">02</span><h4>Plan Layout</h4><p>Zone primary activity work triangles.</p></div>
+        <div class="card-dark"><span class="gold-text" style="font-size: 16px; font-weight: 900;">03</span><h4>Choose Materials</h4><p>Evaluate stone porosity and cabinet millwork.</p></div>
+        <div class="card-dark"><span class="gold-text" style="font-size: 16px; font-weight: 900;">04</span><h4>Build Budget</h4><p>Allocate line items & reserve contingency buffer.</p></div>
+        <div class="card-dark"><span class="gold-text" style="font-size: 16px; font-weight: 900;">05</span><h4>Plan Timeline</h4><p>Understand lead times for custom fabrication.</p></div>
+        <div class="card-dark"><span class="gold-text" style="font-size: 16px; font-weight: 900;">06</span><h4>Choose Partner</h4><p>Ask critical questions to vet contractors.</p></div>
       </div>
     </div>
     <div class="footer-bar">
@@ -244,23 +277,33 @@
       <span class="page-num">PAGE 03 / 14</span>
     </div>
     <div>
-      <p class="font-script gold-text" style="font-size: 22px;">Avoid these costly missteps...</p>
-      <h2 style="font-size: 26px; margin-bottom: 16px;">5 CRITICAL MISTAKES <span style="color:#E53935;">(MISTAKES 01 & 02)</span></h2>
+      <p class="font-script gold-text" style="font-size: 20px;">Avoid these costly missteps...</p>
+      <h2 style="font-size: 24px; margin-bottom: 12px;">5 CRITICAL MISTAKES <span style="color:#E53935;">(MISTAKES 01 & 02)</span></h2>
 
-      <div class="card" style="margin-bottom: 16px;">
-        <h3 style="color:#D8B45A; font-size: 16px;">01. CHOOSING MATERIALS BEFORE PLANNING THE LAYOUT</h3>
-        <p style="margin-bottom: 10px;">Homeowners frequently fall in love with custom cabinets, exotic stone slabs, or commercial ranges before verifying that those exact dimensions function within the room footprint.</p>
-        <div class="grid-2" style="margin-bottom: 10px;">
-          <div style="background: rgba(0,0,0,0.4); padding: 8px; border-radius: 6px;"><span style="color:#FCA5A5; font-size: 9px; font-weight:700;">WHY IT MATTERS</span><p style="font-size: 10px;">Pre-purchased materials force awkward layout compromises and expensive retrofit fees.</p></div>
-          <div style="background: rgba(7,26,74,0.6); padding: 8px; border-radius: 6px; border: 1px solid #D8B45A;"><span class="gold-text" style="font-size: 9px; font-weight:700;">BETTER APPROACH</span><p style="font-size: 10px;">Plan layout → confirm dimensions → determine function → select materials.</p></div>
+      <div class="card" style="margin-bottom: 12px;">
+        <h3 style="color:#D8B45A; font-size: 14px;">01. CHOOSING MATERIALS BEFORE PLANNING THE LAYOUT</h3>
+        <div class="grid-2" style="margin-bottom: 8px;">
+          <div>
+            <p style="margin-bottom: 8px;">Homeowners frequently fall in love with custom cabinets, exotic stone slabs, or commercial ranges before verifying that those exact dimensions function within the room footprint.</p>
+            <div style="background: rgba(0,0,0,0.4); padding: 6px; border-radius: 6px; margin-bottom: 6px;"><span style="color:#FCA5A5; font-size: 8.5px; font-weight:700;">WHY IT MATTERS</span><p style="font-size: 9.5px;">Pre-purchased materials force awkward layout compromises and expensive retrofit fees.</p></div>
+          </div>
+          <div>
+            <img src="C:/DM Kitchen Landing/assets/generative/3.jpg" alt="Kitchen Layout Planning" class="photo-box" style="height: 100px;" />
+          </div>
         </div>
         <div class="callout-red">CALLOUT: A beautiful material cannot fix a poorly planned kitchen.</div>
       </div>
 
       <div class="card">
-        <h3 style="color:#D8B45A; font-size: 16px;">02. UNDERESTIMATING THE TRUE PROJECT SCOPE</h3>
-        <p style="margin-bottom: 10px;">Focusing solely on visible cosmetic surfaces leads homeowners to ignore the vital behind-the-wall infrastructure required to support modern luxury appliances.</p>
-        <div class="callout" style="margin-top: 8px;">CALLOUT: A complete plan accounts for the work behind finished surfaces—not just what you see.</div>
+        <h3 style="color:#D8B45A; font-size: 14px;">02. UNDERESTIMATING THE TRUE PROJECT SCOPE</h3>
+        <p style="margin-bottom: 8px;">Focusing solely on visible cosmetic surfaces leads homeowners to ignore the vital behind-the-wall infrastructure required to support modern luxury appliances.</p>
+        <div class="grid-4" style="text-align: center; margin-bottom: 8px;">
+          <div class="card-dark"><strong>ELECTRICAL</strong><p style="font-size:8px;">200A Service</p></div>
+          <div class="card-dark"><strong>PLUMBING</strong><p style="font-size:8px;">Supply Lines</p></div>
+          <div class="card-dark"><strong>VENTILATION</strong><p style="font-size:8px;">High-CFM Duct</p></div>
+          <div class="card-dark"><strong>SUBFLOOR</strong><p style="font-size:8px;">Level Prep</p></div>
+        </div>
+        <div class="callout">CALLOUT: A complete plan accounts for the work behind finished surfaces—not just what you see.</div>
       </div>
     </div>
     <div class="footer-bar">
@@ -276,18 +319,30 @@
       <span class="page-num">PAGE 04 / 14</span>
     </div>
     <div>
-      <p class="font-script gold-text" style="font-size: 22px;">Functionality meets beauty...</p>
-      <h2 style="font-size: 26px; margin-bottom: 16px;">5 CRITICAL MISTAKES <span style="color:#E53935;">(MISTAKES 03 & 04)</span></h2>
+      <p class="font-script gold-text" style="font-size: 20px;">Functionality meets beauty...</p>
+      <h2 style="font-size: 24px; margin-bottom: 12px;">5 CRITICAL MISTAKES <span style="color:#E53935;">(MISTAKES 03 & 04)</span></h2>
 
-      <div class="card" style="margin-bottom: 16px;">
-        <h3 style="color:#D8B45A; font-size: 16px;">03. DESIGNING FOR TODAY INSTEAD OF HOW YOU LIVE</h3>
-        <p style="margin-bottom: 10px;">Designing purely based on an existing layout without analyzing real-world daily behavior leads to friction during meal prep, family gatherings, and morning routines.</p>
+      <div class="card" style="margin-bottom: 12px;">
+        <h3 style="color:#D8B45A; font-size: 14px;">03. DESIGNING FOR TODAY INSTEAD OF HOW YOU LIVE</h3>
+        <div class="grid-2" style="margin-bottom: 8px;">
+          <div>
+            <p style="margin-bottom: 8px;">Designing purely based on an existing layout without analyzing real-world daily behavior leads to friction during meal prep, family gatherings, and morning routines.</p>
+            <ul style="font-size: 9.5px; color: #D8B45A; padding-left: 14px; line-height: 1.5;">
+              <li>Entertaining & Island Seating</li>
+              <li>Multi-Cook Traffic Aisles</li>
+              <li>Dedicated Coffee Bar Station</li>
+            </ul>
+          </div>
+          <div>
+            <img src="C:/DM Kitchen Landing/assets/generative/4.jpg" alt="Kitchen Lifestyle Workflow" class="photo-box" style="height: 100px;" />
+          </div>
+        </div>
         <div class="callout">CALLOUT: Design around your life—not just the room.</div>
       </div>
 
       <div class="card">
-        <h3 style="color:#D8B45A; font-size: 16px;">04. SACRIFICING FUNCTION FOR LOOKS</h3>
-        <p style="margin-bottom: 10px;">A visually stunning kitchen that fails ergonomically quickly becomes a source of daily frustration. High-end design must serve human utility first.</p>
+        <h3 style="color:#D8B45A; font-size: 14px;">04. SACRIFICING FUNCTION FOR LOOKS</h3>
+        <p style="margin-bottom: 8px;">A visually stunning kitchen that fails ergonomically quickly becomes a source of daily frustration. High-end design must serve human utility first.</p>
         <div class="callout-red">CALLOUT: The best kitchen is the one that looks beautiful and works beautifully.</div>
       </div>
     </div>
@@ -304,23 +359,32 @@
       <span class="page-num">PAGE 05 / 14</span>
     </div>
     <div>
-      <p class="font-script gold-text" style="font-size: 22px;">Protect your investment...</p>
-      <h2 style="font-size: 26px; margin-bottom: 16px;">5 CRITICAL MISTAKES <span style="color:#E53935;">(MISTAKE 05)</span></h2>
+      <p class="font-script gold-text" style="font-size: 20px;">Protect your investment...</p>
+      <h2 style="font-size: 24px; margin-bottom: 12px;">5 CRITICAL MISTAKES <span style="color:#E53935;">(MISTAKE 05)</span></h2>
 
-      <div class="card" style="margin-bottom: 20px;">
-        <h3 style="color:#D8B45A; font-size: 16px;">05. FAILING TO PLAN FOR THE UNEXPECTED</h3>
-        <p style="margin-bottom: 10px;">Every home hides history behind its walls. Assuming zero surprises during demolition creates unnecessary financial friction when hidden site conditions appear.</p>
+      <div class="card" style="margin-bottom: 14px;">
+        <h3 style="color:#D8B45A; font-size: 14px;">05. FAILING TO PLAN FOR THE UNEXPECTED</h3>
+        <div class="grid-2" style="margin-bottom: 8px;">
+          <div>
+            <p style="margin-bottom: 8px;">Every home hides history behind its walls. Assuming zero surprises during demolition creates unnecessary financial friction when hidden site conditions appear.</p>
+            <p style="font-size: 9px; color: #D8B45A;">• Older Homes (20+ Yrs): Dated wiring & plumbing</p>
+            <p style="font-size: 9px; color: #D8B45A;">• Wall Removal: Load-bearing posts</p>
+          </div>
+          <div>
+            <img src="C:/DM Kitchen Landing/assets/kitchen-photo-4.png" alt="Demolition & Site Reveal" class="photo-box" style="height: 95px;" />
+          </div>
+        </div>
         <div class="callout">CALLOUT: The goal isn't to expect problems. It's to be prepared if they appear.</div>
       </div>
 
       <div class="card-dark">
-        <h4 class="gold-text" style="font-size: 12px; margin-bottom: 8px;">EDITORIAL RECAP: THE 5 MISTAKES AT A GLANCE</h4>
-        <div class="grid-5" style="text-align: center; font-size: 9px; font-weight: 600;">
-          <div style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 4px;">01. Layout Before Materials</div>
-          <div style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 4px;">02. Account for Full Scope</div>
-          <div style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 4px;">03. Design for How You Live</div>
-          <div style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 4px;">04. Balance Function & Beauty</div>
-          <div style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 4px;">05. Prepare Contingency Reserve</div>
+        <h4 class="gold-text" style="font-size: 11px; margin-bottom: 6px;">EDITORIAL RECAP: THE 5 MISTAKES AT A GLANCE</h4>
+        <div class="grid-5" style="text-align: center; font-size: 8.5px; font-weight: 600;">
+          <div style="background: rgba(255,255,255,0.05); padding: 6px; border-radius: 4px;">01. Layout Before Materials</div>
+          <div style="background: rgba(255,255,255,0.05); padding: 6px; border-radius: 4px;">02. Account for Full Scope</div>
+          <div style="background: rgba(255,255,255,0.05); padding: 6px; border-radius: 4px;">03. Design for How You Live</div>
+          <div style="background: rgba(255,255,255,0.05); padding: 6px; border-radius: 4px;">04. Balance Function & Beauty</div>
+          <div style="background: rgba(255,255,255,0.05); padding: 6px; border-radius: 4px;">05. Prepare Contingency Reserve</div>
         </div>
       </div>
     </div>
@@ -330,17 +394,36 @@
     </div>
   </div>
 
-  <!-- PAGE 6: COUNTERTOP COMPARISON -->
+  <!-- PAGE 6: COUNTERTOP STONE GALLERY & COMPARISON MATRIX -->
   <div class="page">
     <div class="header-bar">
       <span class="header-title">SURFACE SELECTION MATRIX</span>
       <span class="page-num">PAGE 06 / 14</span>
     </div>
     <div>
-      <p class="font-script gold-text" style="font-size: 22px;">Choose your surface wisely...</p>
-      <h2 style="font-size: 26px; margin-bottom: 14px;">QUARTZ <span class="gold-text">vs.</span> GRANITE <span style="color:#60A5FA;">vs.</span> MARBLE</h2>
+      <p class="font-script gold-text" style="font-size: 20px;">Choose your surface wisely...</p>
+      <h2 style="font-size: 24px; margin-bottom: 10px;">QUARTZ <span class="gold-text">vs.</span> GRANITE <span class="blue-text">vs.</span> MARBLE</h2>
 
-      <table style="margin-bottom: 14px;">
+      <!-- COUNTERTOP PHOTO GALLERY -->
+      <div class="grid-3" style="margin-bottom: 10px;">
+        <div class="card" style="padding: 6px; text-align: center;">
+          <img src="C:/DM Kitchen Landing/assets/kitchen-countertops.jpg" alt="Calacatta Engineered Quartz Countertop" class="photo-box" style="height: 85px;" />
+          <span class="badge badge-gold">CALACATTA QUARTZ</span>
+          <p style="font-size: 8.5px; margin-top: 4px;">Non-porous engineered quartz slab with gold veining.</p>
+        </div>
+        <div class="card" style="padding: 6px; text-align: center;">
+          <img src="C:/DM Kitchen Landing/assets/generative/2.jpg" alt="Natural Granite Countertop Slab" class="photo-box" style="height: 85px;" />
+          <span class="badge badge-blue">NATURAL GRANITE</span>
+          <p style="font-size: 8.5px; margin-top: 4px;">Igneous natural rock with extreme heat resistance.</p>
+        </div>
+        <div class="card" style="padding: 6px; text-align: center;">
+          <img src="C:/DM Kitchen Landing/assets/kitchen-modern.jpg" alt="Classic Carrara Marble Surface" class="photo-box" style="height: 85px;" />
+          <span class="badge badge-red">CARRARA MARBLE</span>
+          <p style="font-size: 8.5px; margin-top: 4px;">Prestige organic marble with soft velvet luster.</p>
+        </div>
+      </div>
+
+      <table style="margin-bottom: 8px;">
         <thead>
           <tr>
             <th>CRITERIA</th>
@@ -355,71 +438,95 @@
           <tr><td style="font-weight:700;">Porosity</td><td>Non-porous structure.</td><td>Porosity varies by slab.</td><td>Porous stone structure.</td></tr>
           <tr><td style="font-weight:700;">Sealing</td><td>Does not require sealing.</td><td>Requires periodic sealing.</td><td>Requires regular sealing.</td></tr>
           <tr><td style="font-weight:700;">Scratch Resistance</td><td>High scratch resistance.</td><td>Strong stone durability.</td><td>Susceptible to etching.</td></tr>
-          <tr><td style="font-weight:700;">Heat Considerations</td><td>Follow heat guidelines.</td><td>Excellent heat performance.</td><td>Good heat performance.</td></tr>
-          <tr><td style="font-weight:700;">Stain Resistance</td><td>Excellent stain resistance.</td><td>Good stain resistance.</td><td>Sensitive to acid stains.</td></tr>
+          <tr><td style="font-weight:700;">Heat Performance</td><td>Follow heat guidelines.</td><td>Excellent heat performance.</td><td>Good heat performance.</td></tr>
           <tr><td style="font-weight:700;">Best Suited For</td><td>Low maintenance priority.</td><td>Natural stone lovers.</td><td>Classic luxury aesthetics.</td></tr>
         </tbody>
       </table>
-      <p style="font-size: 9px; color: rgba(255,255,255,0.6);"><strong>Disclaimer:</strong> Material performance varies by specific product, finish, installation and fabricator. Confirm care requirements prior to selection.</p>
+      <p style="font-size: 8.5px; color: rgba(255,255,255,0.6);"><strong>Disclaimer:</strong> Material performance varies by product, finish, and fabricator. Confirm care requirements prior to selection.</p>
     </div>
     <div class="footer-bar">
       <span>THE SMART HOMEOWNER'S KITCHEN REMODELING GUIDE</span>
-      <span>COUNTERTOP MATRIX</span>
+      <span>COUNTERTOP MATRIX & GALLERY</span>
     </div>
   </div>
 
-  <!-- PAGE 7: CABINET STORAGE & STYLE -->
+  <!-- PAGE 7: CABINET STORAGE & SHAKER STYLE GALLERY -->
   <div class="page">
     <div class="header-bar">
       <span class="header-title">MILLWORK & ERGONOMICS</span>
       <span class="page-num">PAGE 07 / 14</span>
     </div>
     <div>
-      <p class="font-script gold-text" style="font-size: 22px;">Purposeful millwork engineering...</p>
-      <h2 style="font-size: 24px; margin-bottom: 12px;">DESIGN STORAGE <span class="gold-text">BEFORE</span> YOU DESIGN CABINETS.</h2>
+      <p class="font-script gold-text" style="font-size: 20px;">Purposeful millwork engineering...</p>
+      <h2 style="font-size: 22px; margin-bottom: 8px;">DESIGN STORAGE <span class="gold-text">BEFORE</span> YOU DESIGN CABINETS.</h2>
       
-      <div class="grid-3" style="margin-bottom: 14px;">
-        <div class="card"><span class="gold-text" style="font-weight:900;">01</span><h4>DEEP DRAWERS</h4><p>Pots, pans, and everyday dishware accessible in one pull.</p></div>
-        <div class="card"><span class="gold-text" style="font-weight:900;">02</span><h4>VERTICAL STORAGE</h4><p>Tray dividers for baking sheets and cutting boards.</p></div>
-        <div class="card"><span class="gold-text" style="font-weight:900;">03</span><h4>PANTRY ZONES</h4><p>Grouped by frequency of use and dry goods.</p></div>
-        <div class="card"><span class="gold-text" style="font-weight:900;">04</span><h4>APPLIANCE STORAGE</h4><p>Concealed appliance garages with internal power.</p></div>
-        <div class="card"><span class="gold-text" style="font-weight:900;">05</span><h4>TRASH & RECYCLING</h4><p>Dual-bin pull-out directly beside prep sink.</p></div>
-        <div class="card"><span class="gold-text" style="font-weight:900;">06</span><h4>CORNER SOLUTIONS</h4><p>Blind-corner articulating magic corner systems.</p></div>
+      <!-- CABINET STYLE PHOTO GALLERY -->
+      <div class="grid-3" style="margin-bottom: 10px;">
+        <div class="card" style="padding: 6px; text-align: center;">
+          <img src="C:/DM Kitchen Landing/assets/kitchen-photo-1.png" alt="Emerald Green & Gold Shaker Style Cabinets" class="photo-box" style="height: 85px;" />
+          <span class="badge badge-gold">01. SHAKER STYLE</span>
+          <p style="font-size: 8.5px; margin-top: 4px;">Recessed center panel with clean square edges.</p>
+        </div>
+        <div class="card" style="padding: 6px; text-align: center;">
+          <img src="C:/DM Kitchen Landing/assets/kitchen-photo-2.png" alt="Modern Minimalist Flat Slab Cabinets" class="photo-box" style="height: 85px;" />
+          <span class="badge badge-blue">02. FLAT SLAB</span>
+          <p style="font-size: 8.5px; margin-top: 4px;">Seamless unadorned slab for modern kitchens.</p>
+        </div>
+        <div class="card" style="padding: 6px; text-align: center;">
+          <img src="C:/DM Kitchen Landing/assets/kitchen-photo-3.png" alt="Custom Inset Cabinetry" class="photo-box" style="height: 85px;" />
+          <span class="badge badge-gold">03. INSET CUSTOM</span>
+          <p style="font-size: 8.5px; margin-top: 4px;">Doors set flush inside the cabinet face frame.</p>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-bottom: 10px;">
+        <div class="card-dark"><span class="gold-text" style="font-weight:900;">01</span><h4>DEEP DRAWERS</h4><p>Pots, pans, and dishware in one pull.</p></div>
+        <div class="card-dark"><span class="gold-text" style="font-weight:900;">02</span><h4>VERTICAL STORAGE</h4><p>Dividers for baking sheets & boards.</p></div>
+        <div class="card-dark"><span class="gold-text" style="font-weight:900;">03</span><h4>PANTRY ZONES</h4><p>Grouped by frequency of use.</p></div>
+        <div class="card-dark"><span class="gold-text" style="font-weight:900;">04</span><h4>APPLIANCE GARAGE</h4><p>Concealed storage with power outlets.</p></div>
+        <div class="card-dark"><span class="gold-text" style="font-weight:900;">05</span><h4>TRASH & RECYCLING</h4><p>Dual-bin pull-out beside prep sink.</p></div>
+        <div class="card-dark"><span class="gold-text" style="font-weight:900;">06</span><h4>CORNER SOLUTIONS</h4><p>Articulating magic corner systems.</p></div>
       </div>
       <div class="callout">CALLOUT: Every cabinet should have a purpose before it gets built.</div>
     </div>
     <div class="footer-bar">
       <span>THE SMART HOMEOWNER'S KITCHEN REMODELING GUIDE</span>
-      <span>STORAGE & CABINETS</span>
+      <span>STORAGE & CABINET GALLERY</span>
     </div>
   </div>
 
-  <!-- PAGE 8: PANTRY PLANNING -->
+  <!-- PAGE 8: PANTRY PLANNING & GALLERY -->
   <div class="page">
     <div class="header-bar">
       <span class="header-title">PANTRY SYSTEM ARCHITECTURE</span>
       <span class="page-num">PAGE 08 / 14</span>
     </div>
     <div>
-      <p class="font-script gold-text" style="font-size: 22px;">Mastering pantry workflow...</p>
-      <h2 style="font-size: 24px; margin-bottom: 12px;">YOUR PANTRY SHOULD <span class="gold-text">WORK AS HARD</span> AS YOUR KITCHEN.</h2>
+      <p class="font-script gold-text" style="font-size: 20px;">Mastering pantry workflow...</p>
+      <h2 style="font-size: 22px; margin-bottom: 8px;">YOUR PANTRY SHOULD <span class="gold-text">WORK AS HARD</span> AS YOUR KITCHEN.</h2>
       
-      <div class="grid-5" style="margin-bottom: 16px;">
-        <div class="card-dark"><span class="gold-text" style="font-size:9px; font-weight:700;">ZONE 01</span><h4>EVERYDAY</h4><p style="font-size:9px;">Breakfast, coffee & 3x daily items.</p></div>
-        <div class="card-dark"><span class="gold-text" style="font-size:9px; font-weight:700;">ZONE 02</span><h4>COOKING</h4><p style="font-size:9px;">Oils, vinegars, spices & stocks.</p></div>
-        <div class="card-dark"><span class="gold-text" style="font-size:9px; font-weight:700;">ZONE 03</span><h4>BAKING</h4><p style="font-size:9px;">Flours, sugars & baking tools.</p></div>
-        <div class="card-dark"><span class="gold-text" style="font-size:9px; font-weight:700;">ZONE 04</span><h4>BULK STORAGE</h4><p style="font-size:9px;">Overstock dry goods & paper items.</p></div>
-        <div class="card-dark"><span class="gold-text" style="font-size:9px; font-weight:700;">ZONE 05</span><h4>SMALL APPLIANCES</h4><p style="font-size:9px;">Slow cookers, air fryers & mixers.</p></div>
+      <div class="grid-2" style="margin-bottom: 10px;">
+        <div>
+          <img src="C:/DM Kitchen Landing/assets/generative/8.webp" alt="Full-Height Custom Walk-In Pantry" class="photo-box-lg" style="height: 120px;" />
+        </div>
+        <div class="card" style="padding: 10px;">
+          <h4 class="gold-text">5 PANTRY ARCHITECTURE ZONES</h4>
+          <p style="font-size: 9px; margin-bottom: 3px;"><strong>1. EVERYDAY:</strong> Breakfast & 3x daily items.</p>
+          <p style="font-size: 9px; margin-bottom: 3px;"><strong>2. COOKING:</strong> Oils, vinegars, spices & stocks.</p>
+          <p style="font-size: 9px; margin-bottom: 3px;"><strong>3. BAKING:</strong> Flours, sugars & baking tools.</p>
+          <p style="font-size: 9px; margin-bottom: 3px;"><strong>4. BULK STORAGE:</strong> Extra dry goods & cases.</p>
+          <p style="font-size: 9px;"><strong>5. SMALL APPLIANCES:</strong> Air fryers & mixers.</p>
+        </div>
       </div>
 
       <div class="card">
         <h3 class="gold-text">PANTRY PLANNING CHECKLIST</h3>
-        <ul style="list-style: none; font-size: 10px; line-height: 1.8;">
+        <ul style="list-style: none; font-size: 9.5px; line-height: 1.7;">
           <li>[✓] Frequently used items within easy arm's reach</li>
-          <li>[✓] Small countertop appliances have dedicated power</li>
-          <li>[✓] Vertical height is maximized with tiered shelves</li>
+          <li>[✓] Small countertop appliances have dedicated power & storage</li>
+          <li>[✓] Vertical height is maximized with adjustable tiered shelves</li>
           <li>[✓] Deep shelves utilize full-extension pull-out baskets</li>
-          <li>[✓] Dedicated pantry lighting illuminates every shelf</li>
+          <li>[✓] Dedicated pantry lighting illuminates every shelf clearly</li>
         </ul>
       </div>
     </div>
@@ -429,43 +536,56 @@
     </div>
   </div>
 
-  <!-- PAGE 9: KITCHEN LAYOUT -->
+  <!-- PAGE 9: LAYOUT, SINKS, BACKSPLASH TILE & LVP FLOORING -->
   <div class="page">
     <div class="header-bar">
-      <span class="header-title">ZONING ARCHITECTURE & FIXTURES</span>
+      <span class="header-title">FIXTURES, TILES & LVP FLOORING</span>
       <span class="page-num">PAGE 09 / 14</span>
     </div>
     <div>
-      <p class="font-script gold-text" style="font-size: 22px;">Optimizing room movement...</p>
-      <h2 style="font-size: 24px; margin-bottom: 14px;">THE LAYOUT CAN <span style="color:#E53935;">MAKE OR BREAK</span> YOUR KITCHEN.</h2>
-      
-      <div class="card" style="margin-bottom: 14px;">
-        <h3 class="gold-text">5 ESSENTIAL KITCHEN ACTIVITY ZONES</h3>
-        <div class="grid-5" style="text-align: center;">
-          <div style="border: 1px solid #D8B45A; padding: 6px; border-radius: 6px;"><h4 style="font-size:10px;">PREP ZONE</h4><p style="font-size:8px;">Counter (36"+) + Knives</p></div>
-          <div style="border: 1px solid #E53935; padding: 6px; border-radius: 6px;"><h4 style="font-size:10px;">COOKING</h4><p style="font-size:8px;">Range + Hood + Oils</p></div>
-          <div style="border: 1px solid #123C91; padding: 6px; border-radius: 6px;"><h4 style="font-size:10px;">CLEANUP</h4><p style="font-size:8px;">Sink + Dishwasher</p></div>
-          <div style="border: 1px solid #D8B45A; padding: 6px; border-radius: 6px;"><h4 style="font-size:10px;">STORAGE</h4><p style="font-size:8px;">Fridge + Pantry</p></div>
-          <div style="border: 1px solid #10B981; padding: 6px; border-radius: 6px;"><h4 style="font-size:10px;">ENTERTAIN</h4><p style="font-size:8px;">Island + Seating</p></div>
+      <p class="font-script gold-text" style="font-size: 20px;">Optimizing room movement...</p>
+      <h2 style="font-size: 22px; margin-bottom: 8px;">THE LAYOUT CAN <span style="color:#E53935;">MAKE OR BREAK</span> YOUR KITCHEN.</h2>
+
+      <!-- SINK & FLOORING PHOTO COMPARISON GALLERY -->
+      <div class="grid-2" style="margin-bottom: 8px;">
+        <div class="card" style="padding: 8px; text-align: center;">
+          <img src="C:/DM Kitchen Landing/assets/generative/1.jpg" alt="Seamless Undermount Sink in Quartz Counter" class="photo-box" style="height: 85px;" />
+          <span class="badge badge-gold">UNDERMOUNT SINK</span>
+          <p style="font-size: 8.5px; margin-top: 4px;">Flush under counter. Wipe crumbs directly into basin.</p>
+        </div>
+        <div class="card" style="padding: 8px; text-align: center;">
+          <img src="C:/DM Kitchen Landing/assets/hero-kitchen.jpg" alt="Top-Mount Drop-in Sink" class="photo-box" style="height: 85px;" />
+          <span class="badge badge-blue">DROP-IN SINK</span>
+          <p style="font-size: 8.5px; margin-top: 4px;">Overlapping rim lip sitting on top of counter.</p>
         </div>
       </div>
 
-      <div class="grid-2">
-        <div class="card-dark border-gold">
-          <span class="badge badge-gold" style="margin-bottom: 4px;">LUXURY STANDARD</span>
-          <h4>UNDERMOUNT SINK</h4>
-          <p>Installed completely beneath countertop cutoff. Seamless wipe-down without catching on a rim.</p>
+      <!-- TILE & LARGE FORMAT LVP FLOORING -->
+      <div class="grid-2" style="margin-bottom: 8px;">
+        <div class="card-dark">
+          <span class="gold-text" style="font-size: 9px; font-weight:700;">BACKSPLASH TILE OPTIONS</span>
+          <p style="font-size: 8.5px; margin-top: 2px;">Zellige handmade clay tiles, marble subway herringbone, or waterjet brass geometric inlays.</p>
         </div>
         <div class="card-dark">
-          <span class="badge badge-blue" style="margin-bottom: 4px;">TRADITIONAL ENTRY</span>
-          <h4>DROP-IN / TOP-MOUNT SINK</h4>
-          <p>Rest on top of countertop cutout with an overlapping lip rim where debris can collect.</p>
+          <span class="gold-text" style="font-size: 9px; font-weight:700;">LARGE FORMAT LVP FLOORING</span>
+          <p style="font-size: 8.5px; margin-top: 2px;">Waterproof Luxury Vinyl Plank (LVP) wood planks with acoustic underlayment & scratch resistance.</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding: 8px;">
+        <h4 class="gold-text" style="font-size: 10px; text-align:center;">5 ESSENTIAL KITCHEN ACTIVITY ZONES</h4>
+        <div class="grid-5" style="text-align: center; font-size: 8px;">
+          <div style="border: 1px solid #D8B45A; padding: 4px; border-radius: 4px;"><strong>PREP</strong><p>Counter 36"+</p></div>
+          <div style="border: 1px solid #E53935; padding: 4px; border-radius: 4px;"><strong>COOKING</strong><p>Range + Hood</p></div>
+          <div style="border: 1px solid #123C91; padding: 4px; border-radius: 4px;"><strong>CLEANUP</strong><p>Sink + Dishwasher</p></div>
+          <div style="border: 1px solid #D8B45A; padding: 4px; border-radius: 4px;"><strong>STORAGE</strong><p>Fridge + Pantry</p></div>
+          <div style="border: 1px solid #10B981; padding: 4px; border-radius: 4px;"><strong>ENTERTAIN</strong><p>Island Seating</p></div>
         </div>
       </div>
     </div>
     <div class="footer-bar">
       <span>THE SMART HOMEOWNER'S KITCHEN REMODELING GUIDE</span>
-      <span>LAYOUT & FIXTURE SELECTION</span>
+      <span>FIXTURES & FLOORING</span>
     </div>
   </div>
 
@@ -476,32 +596,32 @@
       <span class="page-num">PAGE 10 / 14</span>
     </div>
     <div>
-      <p class="font-script gold-text" style="font-size: 22px;">Financial clarity...</p>
-      <h2 style="font-size: 24px; margin-bottom: 12px;">BUILD YOUR KITCHEN <span class="gold-text">REMODELING BUDGET</span></h2>
+      <p class="font-script gold-text" style="font-size: 20px;">Financial clarity...</p>
+      <h2 style="font-size: 22px; margin-bottom: 8px;">BUILD YOUR KITCHEN <span class="gold-text">REMODELING BUDGET</span></h2>
 
-      <div class="card" style="margin-bottom: 12px;">
+      <div class="card" style="margin-bottom: 10px;">
         <h3 class="gold-text" style="font-size: 11px;">LINE-ITEM BUDGET WORKSHEET</h3>
-        <div class="grid-2" style="font-size: 10px;">
+        <div class="grid-2" style="font-size: 9.5px; line-height: 1.8;">
           <div>CABINETRY: $ ____________</div>
           <div>COUNTERTOPS: $ ____________</div>
           <div>APPLIANCES: $ ____________</div>
-          <div>FLOORING: $ ____________</div>
-          <div>LIGHTING & ELECTRICAL: $ ____________</div>
+          <div>FLOORING & LVP: $ ____________</div>
+          <div>LIGHTING & ELEC: $ ____________</div>
           <div>PLUMBING: $ ____________</div>
-          <div>BACKSPLASH: $ ____________</div>
-          <div>HARDWARE & FIXTURES: $ ____________</div>
-          <div>LABOR / INSTALLATION: $ ____________</div>
+          <div>BACKSPLASH TILE: $ ____________</div>
+          <div>HARDWARE/FIXTURES: $ ____________</div>
+          <div>LABOR/INSTALL: $ ____________</div>
           <div>PERMITS & SERVICES: $ ____________</div>
           <div>CONTINGENCY RESERVE: $ ____________</div>
         </div>
-        <div style="margin-top: 10px; padding-top: 8px; border-top: 2px solid #D8B45A; font-weight: 800; font-size: 12px;" class="gold-text">
+        <div style="margin-top: 8px; padding-top: 6px; border-top: 2px solid #D8B45A; font-weight: 800; font-size: 11px;" class="gold-text">
           TOTAL ESTIMATED PROJECT BUDGET: $ ____________
         </div>
       </div>
 
       <div class="card-dark">
-        <h4 style="font-size: 10px; color: #E53935; margin-bottom: 4px;">DON'T FORGET TO ACCOUNT FOR:</h4>
-        <p style="font-size: 9px;">Delivery Fees • Demolition • Debris Disposal • City Permits • Temporary Kitchen Setup • Unexpected Repairs • Final Touch-ups</p>
+        <h4 style="font-size: 9.5px; color: #E53935; margin-bottom: 3px;">DON'T FORGET TO ACCOUNT FOR:</h4>
+        <p style="font-size: 8.5px;">Delivery Fees • Demolition • Debris Disposal • City Permits • Temporary Kitchen Setup • Unexpected Repairs • Final Touch-ups</p>
       </div>
     </div>
     <div class="footer-bar">
@@ -517,20 +637,20 @@
       <span class="page-num">PAGE 11 / 14</span>
     </div>
     <div>
-      <p class="font-script gold-text" style="font-size: 22px;">Phase sequencing breakdown...</p>
-      <h2 style="font-size: 24px; margin-bottom: 14px;">HOW LONG WILL YOUR <span class="gold-text">KITCHEN REMODEL</span> TAKE?</h2>
+      <p class="font-script gold-text" style="font-size: 20px;">Phase sequencing breakdown...</p>
+      <h2 style="font-size: 22px; margin-bottom: 10px;">HOW LONG WILL YOUR <span class="gold-text">KITCHEN REMODEL</span> TAKE?</h2>
 
-      <div class="grid-4 grid-2" style="margin-bottom: 14px;">
-        <div class="card"><span class="gold-text">01</span><h4>PLANNING & DESIGN</h4><p>Drafting, zoning & feasibility.</p></div>
-        <div class="card"><span class="gold-text">02</span><h4>SELECTIONS & ORDER</h4><p>Cabinets, stone & lead times.</p></div>
-        <div class="card"><span class="gold-text">03</span><h4>PERMITS & PREP</h4><p>Submitting plans & site protection.</p></div>
-        <div class="card"><span class="gold-text">04</span><h4>DEMOLITION</h4><p>Controlled removal of old elements.</p></div>
-        <div class="card"><span class="gold-text">05</span><h4>ROUGH PLUMBING/ELEC</h4><p>Trenching & high-amp panel wiring.</p></div>
-        <div class="card"><span class="gold-text">06</span><h4>CABINETRY INSTALL</h4><p>Wall base units & island framing.</p></div>
-        <div class="card"><span class="gold-text">07</span><h4>COUNTERTOPS & FINISH</h4><p>Laser templating, stone & tiling.</p></div>
-        <div class="card"><span class="gold-text">08</span><h4>FINAL WALKTHROUGH</h4><p>City sign-offs & white-glove handover.</p></div>
+      <div class="grid-4" style="margin-bottom: 10px;">
+        <div class="card"><span class="gold-text">01</span><h4>PLANNING</h4><p>Zoning & feasibility.</p></div>
+        <div class="card"><span class="gold-text">02</span><h4>SELECTIONS</h4><p>Cabinets & stone.</p></div>
+        <div class="card"><span class="gold-text">03</span><h4>PERMITS</h4><p>Plans & site prep.</p></div>
+        <div class="card"><span class="gold-text">04</span><h4>DEMO</h4><p>Controlled removal.</p></div>
+        <div class="card"><span class="gold-text">05</span><h4>ROUGH-INS</h4><p>Plumbing & elec.</p></div>
+        <div class="card"><span class="gold-text">06</span><h4>CABINETS</h4><p>Base units & island.</p></div>
+        <div class="card"><span class="gold-text">07</span><h4>COUNTERS</h4><p>Templating & stone.</p></div>
+        <div class="card"><span class="gold-text">08</span><h4>HANDOVER</h4><p>Walkthrough & signs.</p></div>
       </div>
-      <p style="font-size: 9px; color: rgba(255,255,255,0.6);"><strong>Timeline Note:</strong> Actual timelines vary by scope, permitting lead times (8-14 wks for custom cabinets), and site conditions.</p>
+      <p style="font-size: 8.5px; color: rgba(255,255,255,0.6);"><strong>Timeline Note:</strong> Actual timelines vary by scope, permitting lead times (8-14 wks for custom cabinets), and site conditions.</p>
     </div>
     <div class="footer-bar">
       <span>THE SMART HOMEOWNER'S KITCHEN REMODELING GUIDE</span>
@@ -545,20 +665,20 @@
       <span class="page-num">PAGE 12 / 14</span>
     </div>
     <div>
-      <p class="font-script gold-text" style="font-size: 22px;">Hire with absolute confidence...</p>
-      <h2 style="font-size: 24px; margin-bottom: 12px;">10 QUESTIONS TO ASK <span class="gold-text">BEFORE HIRING</span> A CONTRACTOR</h2>
+      <p class="font-script gold-text" style="font-size: 20px;">Hire with absolute confidence...</p>
+      <h2 style="font-size: 22px; margin-bottom: 10px;">10 QUESTIONS TO ASK <span class="gold-text">BEFORE HIRING</span> A CONTRACTOR</h2>
 
-      <div class="grid-2" style="font-size: 9px; gap: 8px;">
-        <div class="card-dark"><strong class="gold-text">1. Who manages my project day-to-day on site?</strong><p>Ensure a dedicated manager serves as single contact.</p></div>
-        <div class="card-dark"><strong class="gold-text">2. What is included in the written proposal?</strong><p>Verify line items cover demolition, labor & permits.</p></div>
-        <div class="card-dark"><strong class="gold-text">3. How are change orders documented?</strong><p>Require written authorization before out-of-scope work.</p></div>
-        <div class="card-dark"><strong class="gold-text">4. Who pulls required municipal permits?</strong><p>Reputable contractors handle all filings themselves.</p></div>
-        <div class="card-dark"><strong class="gold-text">5. How do you protect the rest of my home?</strong><p>Ask about containment barriers and dust protection.</p></div>
-        <div class="card-dark"><strong class="gold-text">6. How do you handle hidden site surprises?</strong><p>Confirm photo documentation & cost-option reviews.</p></div>
-        <div class="card-dark"><strong class="gold-text">7. What is the expected project schedule?</strong><p>Look for phase schedules accounting for lead times.</p></div>
-        <div class="card-dark"><strong class="gold-text">8. How are long-lead materials managed?</strong><p>Ensure custom items are ordered before demolition.</p></div>
-        <div class="card-dark"><strong class="gold-text">9. What happens during final walkthrough?</strong><p>Confirm formal punch-list process before final payment.</p></div>
-        <div class="card-dark"><strong class="gold-text">10. Can I see completed project references?</strong><p>Review past client work of similar scope.</p></div>
+      <div class="grid-2" style="font-size: 8.5px; gap: 6px;">
+        <div class="card-dark"><strong class="gold-text">1. Who manages my project day-to-day?</strong><p>Ensure a dedicated manager serves as single contact.</p></div>
+        <div class="card-dark"><strong class="gold-text">2. What is in the written proposal?</strong><p>Verify line items cover demolition, labor & permits.</p></div>
+        <div class="card-dark"><strong class="gold-text">3. How are change orders handled?</strong><p>Require written authorization before out-of-scope work.</p></div>
+        <div class="card-dark"><strong class="gold-text">4. Who pulls municipal permits?</strong><p>Reputable contractors handle all filings themselves.</p></div>
+        <div class="card-dark"><strong class="gold-text">5. How do you protect my home?</strong><p>Ask about containment barriers and dust protection.</p></div>
+        <div class="card-dark"><strong class="gold-text">6. How do you handle site surprises?</strong><p>Confirm photo documentation & cost-option reviews.</p></div>
+        <div class="card-dark"><strong class="gold-text">7. What is the project schedule?</strong><p>Look for phase schedules accounting for lead times.</p></div>
+        <div class="card-dark"><strong class="gold-text">8. How are lead times managed?</strong><p>Ensure custom items are ordered before demolition.</p></div>
+        <div class="card-dark"><strong class="gold-text">9. What is the final walkthrough?</strong><p>Confirm formal punch-list process before final payment.</p></div>
+        <div class="card-dark"><strong class="gold-text">10. Can I see completed references?</strong><p>Review past client work of similar scope.</p></div>
       </div>
     </div>
     <div class="footer-bar">
@@ -567,17 +687,17 @@
     </div>
   </div>
 
-  <!-- PAGE 13: PRE-REMODEL CHECKLIST -->
+  <!-- PAGE 13: PRE-REMODEL MASTER CHECKLIST -->
   <div class="page">
     <div class="header-bar">
       <span class="header-title">MASTER PREPARATION CHECKLIST</span>
       <span class="page-num">PAGE 13 / 14</span>
     </div>
     <div>
-      <p class="font-script gold-text" style="font-size: 22px;">Stay organized & on track...</p>
-      <h2 style="font-size: 24px; margin-bottom: 12px;">YOUR KITCHEN <span class="gold-text">REMODEL CHECKLIST</span></h2>
+      <p class="font-script gold-text" style="font-size: 20px;">Stay organized & on track...</p>
+      <h2 style="font-size: 22px; margin-bottom: 10px;">YOUR KITCHEN <span class="gold-text">REMODEL CHECKLIST</span></h2>
 
-      <div class="card" style="font-size: 9px; line-height: 1.7;">
+      <div class="card" style="font-size: 8.5px; line-height: 1.6;">
         <div class="grid-2">
           <div>
             <p>[✓] Define remodeling primary goals</p>
@@ -586,18 +706,18 @@
             <p>[✓] Measure existing kitchen footprint</p>
             <p>[✓] Identify storage pain points</p>
             <p>[✓] Determine appliance specs & CFM</p>
-            <p>[✓] Choose cabinet door profile</p>
+            <p>[✓] Choose cabinet door profile (Shaker/Slab)</p>
             <p>[✓] Compare countertop stone options</p>
             <p>[✓] Plan task & under-cabinet lighting</p>
           </div>
           <div>
             <p>[✓] Plan electrical outlet placements</p>
             <p>[✓] Plan plumbing supply & gas lines</p>
+            <p>[✓] Select sink (Undermount vs Drop-in)</p>
+            <p>[✓] Select backsplash tile & LVP flooring</p>
             <p>[✓] Verify permit requirements & HOA</p>
             <p>[✓] Reserve 10-15% contingency budget</p>
             <p>[✓] Research licensed remodeling contractors</p>
-            <p>[✓] Review proposals thoroughly</p>
-            <p>[✓] Confirm materials and lead times</p>
             <p>[✓] Establish temporary kitchen setup</p>
             <p>[✓] Schedule final walkthrough</p>
           </div>
@@ -617,13 +737,13 @@
       <span class="page-num">PAGE 14 / 14</span>
     </div>
     <div style="margin: auto 0;">
-      <p class="font-script gold-text" style="font-size: 32px; margin-bottom: 10px;">Your dream kitchen deserves a proper plan.</p>
-      <h2 style="font-size: 38px; color: #FFFFFF; margin-bottom: 12px;">READY TO <span class="gold-text">REMODEL?</span></h2>
-      <p style="font-size: 13px; color: #E7E7E7; margin-bottom: 20px;">You've done the research. Now let's talk about your kitchen.</p>
+      <p class="font-script gold-text" style="font-size: 30px; margin-bottom: 8px;">Your dream kitchen deserves a proper plan.</p>
+      <h2 style="font-size: 36px; color: #FFFFFF; margin-bottom: 10px;">READY TO <span class="gold-text">REMODEL?</span></h2>
+      <p style="font-size: 12px; color: #E7E7E7; margin-bottom: 16px;">You've done the research. Now let's talk about your kitchen.</p>
 
-      <div class="card" style="max-width: 480px; margin: 0 auto 24px auto; text-align: left; background: rgba(7,26,74,0.8);">
-        <h4 class="gold-text" style="font-size: 11px; margin-bottom: 10px;">WHAT YOU'LL GET IN YOUR 1-ON-1 CONSULTATION:</h4>
-        <ul style="list-style: none; font-size: 10px; line-height: 1.8;">
+      <div class="card" style="max-width: 460px; margin: 0 auto 20px auto; text-align: left; background: rgba(7,26,74,0.85);">
+        <h4 class="gold-text" style="font-size: 10px; margin-bottom: 8px;">WHAT YOU'LL GET IN YOUR 1-ON-1 CONSULTATION:</h4>
+        <ul style="list-style: none; font-size: 9.5px; line-height: 1.7;">
           <li>✓ Discuss your remodeling goals & lifestyle vision</li>
           <li>✓ Review your current kitchen layout & challenges</li>
           <li>✓ Explore architectural layout & island possibilities</li>
@@ -632,7 +752,7 @@
         </ul>
       </div>
 
-      <div class="gold-bg" style="display: inline-block; padding: 14px 28px; border-radius: 30px; font-weight: 900; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">
+      <div class="gold-bg" style="display: inline-block; padding: 12px 26px; border-radius: 30px; font-weight: 900; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;">
         BOOK YOUR CONSULTATION →
       </div>
     </div>
