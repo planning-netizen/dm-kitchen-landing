@@ -1647,12 +1647,11 @@ button, input, select, textarea {
 }
 
 .sticky-preview-img {
-  height: 130px;
+  height: 125px;
   width: auto;
-  border-radius: 0;
+  border-radius: 14px;
   border: none;
-  background: transparent;
-  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.7));
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.7);
   object-fit: contain;
   transition: transform 0.3s ease;
 }
