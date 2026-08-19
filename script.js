@@ -299,4 +299,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --------------------------------------------------------------------------
+  // Sticky Lead Magnet Bar Close Listener
+  // --------------------------------------------------------------------------
+  const closeStickyLeadBar = document.getElementById('closeStickyLeadBar');
+  const stickyLeadMagnetBar = document.getElementById('stickyLeadMagnetBar');
+
+  if (closeStickyLeadBar && stickyLeadMagnetBar) {
+    closeStickyLeadBar.addEventListener('click', () => {
+      stickyLeadMagnetBar.classList.add('closed');
+    });
+  }
 });
