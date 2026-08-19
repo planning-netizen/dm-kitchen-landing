@@ -1633,10 +1633,10 @@ button, input, select, textarea {
   opacity: 0;
 }
 
-/* Protruding Preview Image (Taller than Container) */
+/* Protruding Preview Image (Taller than Container & 30% Larger, No Yellow Border) */
 .sticky-preview-wrapper {
   position: relative;
-  margin-top: -2.5rem;
+  margin-top: -3.8rem;
   flex-shrink: 0;
 }
 
@@ -1647,11 +1647,11 @@ button, input, select, textarea {
 }
 
 .sticky-preview-img {
-  height: 96px;
+  height: 125px;
   width: auto;
-  border-radius: 12px;
-  border: 2px solid #c9a227;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(201, 162, 39, 0.3);
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 4px 15px rgba(0, 0, 0, 0.4);
   object-fit: cover;
   transition: transform 0.3s ease;
 }
